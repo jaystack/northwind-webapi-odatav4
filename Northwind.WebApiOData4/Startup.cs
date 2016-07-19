@@ -34,6 +34,8 @@ namespace Northwind
             );
 
             var client = new ODataConventionModelBuilder();
+            client.ContainerName = "NorthwindContext";
+            client.Namespace = "JayStack";
             //client.Namespace = "Test";
             var art = client.EntitySet<Product>("Products");
             var aa = client.EntityType<Product>();

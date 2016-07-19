@@ -15,6 +15,16 @@
             "nullable": false,
             "required": true
         },
+        CategoryId: {
+            "type": "Edm.Int32",
+            "nullable": false,
+            "required": true
+        },
+        Discontinued: {
+            "type": "Edm.Boolean",
+            "nullable": false,
+            "required": true
+        },
         Id: {
             "type": "Edm.Int32",
             "nullable": false,
@@ -153,7 +163,7 @@
         }
     });
 
-    exports.type = types["Default.Container"] = $data("$data.EntityContext").extend("Default.Container", {
+    exports.type = types["Default.Container"] = $data("NorthwindContext").extend("Default.Container", {
         Products: {
             "type": "$data.EntitySet",
             "elementType": "Northwind.Product"

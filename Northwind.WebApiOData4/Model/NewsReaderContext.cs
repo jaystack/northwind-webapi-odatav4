@@ -44,11 +44,11 @@ namespace Northwind.Model
             var cat7 = new Category { Name = "Produce", Description = "Dried fruit and bean curd" };
             var cat8 = new Category { Name = "Seafood", Description = "Seaweed and fish" };
 
-            var prod1 = new Product { Name = "Chai", QuantityPerUnit = "10 boxes x 20 bags", UnitPrice = 18, Category = cat1 };
-            var prod2 = new Product { Name = "Chang", QuantityPerUnit = "24 - 12 oz bottles", UnitPrice = 19, Category = cat1 };
-            var prod3 = new Product { Name = "Aniseed Syrup", QuantityPerUnit = "12 - 550 ml bottles", UnitPrice = 10, Category = cat1 };
-            var prod4 = new Product { Name = "Chef Anton's Cajun Seasoning", QuantityPerUnit = "48 - 6 oz jars", UnitPrice = 22, Category = cat1 };
-            var prod5 = new Product { Name = "Grandma's Boysenberry Spread", QuantityPerUnit = "12 - 8 oz jars", UnitPrice = new decimal(25.5), Category = cat1 };
+            var prod1 = new Product { Name = "Chai", QuantityPerUnit = "10 boxes x 20 bags", UnitPrice = 18, Category = cat1, Discontinued = false, CategoryId = cat1.Id };
+            var prod2 = new Product { Name = "Chang", QuantityPerUnit = "24 - 12 oz bottles", UnitPrice = 19, Category = cat1, Discontinued = false, CategoryId = cat1.Id };
+            var prod3 = new Product { Name = "Aniseed Syrup", QuantityPerUnit = "12 - 550 ml bottles", UnitPrice = 10, Category = cat1, Discontinued = false, CategoryId = cat1.Id };
+            var prod4 = new Product { Name = "Chef Anton's Cajun Seasoning", QuantityPerUnit = "48 - 6 oz jars", UnitPrice = 22, Category = cat2, Discontinued = false, CategoryId = cat2.Id };
+            var prod5 = new Product { Name = "Grandma's Boysenberry Spread", QuantityPerUnit = "12 - 8 oz jars", UnitPrice = 25, Category = cat2, Discontinued = false, CategoryId = cat2.Id };
 
             var categories = new List<Category> { cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8 };
             var products = new List<Product> { prod1, prod2, prod3, prod4, prod5 };

@@ -13,6 +13,8 @@ namespace Northwind
     {
         public string QuantityPerUnit { get; set; }
         public virtual Category Category { get; set; }
-        public decimal UnitPrice { get; set; }
+        public int UnitPrice { get; set; }
+        public int CategoryId { get; set; }
+        public bool Discontinued { get; set; }
     }
 }

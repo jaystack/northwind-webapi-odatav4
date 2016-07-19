@@ -220,10 +220,12 @@ declare module Northwind {
 
     export class Product extends $data.Entity {
         constructor();
-        constructor(initData: { QuantityPerUnit?: Edm.String; UnitPrice?: Edm.Decimal; Id?: Edm.Int32; Name?: Edm.String; Category?: Northwind.Category });
+        constructor(initData: { QuantityPerUnit?: Edm.String; UnitPrice?: Edm.Decimal; CategoryId?: Edm.Int32; Discontinued?: Edm.Boolean; Id?: Edm.Int32; Name?: Edm.String; Category?: Northwind.Category });
 
         QuantityPerUnit: Edm.String;
         UnitPrice: Edm.Decimal;
+        CategoryId: Edm.Int32;
+        Discontinued: Edm.Boolean;
         Id: Edm.Int32;
         Name: Edm.String;
         Category: Northwind.Category;
@@ -233,7 +235,7 @@ declare module Northwind {
 
 declare module Default {
 
-    export class Container extends $data.EntityContext {
+    export class Container extends NorthwindContext {
         onReady(): Promise<Container>;
 
         Products: $data.EntitySet<typeof Northwind.Product, Northwind.Product>;
